@@ -1,4 +1,3 @@
- import { Dashboard } from "@mui/icons-material";
 import { CssBaseline,ThemeProvider } from "@mui/material";
  import { createTheme } from "@mui/material/styles";
 import { useMemo } from "react";
@@ -6,6 +5,7 @@ import { useMemo } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Layout from "scenes/Layout";
  import { themeSettings } from "theme";
+ import Dashboard from "scenes/Dashboard";
 
 
 function App() {
