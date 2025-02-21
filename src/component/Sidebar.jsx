@@ -147,7 +147,6 @@ const Sidebar = ({
                 if (!icon) {
                   return (
                     <>
-                    <Divider sx={{mt: "2rem"}} />
                     <Typography key={text} sx={{ m: "2.25rem 0 1rem 3rem" }}>
                       {text}
                     </Typography>

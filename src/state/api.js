@@ -5,13 +5,18 @@ export const api = createApi({
     reducerPath: "adminApi",
     tagTypes:[
         "User",
+        "Products",
     ],
-    endpoints:(bulder)=>({
-        getUser: bulder.query({
+    endpoints:(builder)=>({
+        getUser: builder.query({
             query: (id)=>`general/user/${id}`,
             providesTags:["User"],
         }),
+        getProducts: builder.query({
+            query: ()=>'client/products',
+            providesTags:["Products"]
+        })
     })
 })
 
-export const {useGetUserQuery}=api;
+export const {useGetUserQuery,useGetProductsQuery}=api;
