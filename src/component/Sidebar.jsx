@@ -20,7 +20,6 @@ import {
   ShoppingCartOutlined,
   Groups2Outlined,
   ReceiptLongOutlined,
-  PublicOutlined,
   PointOfSaleOutlined,
   TodayOutlined,
   CalendarMonthOutlined,
@@ -53,10 +52,6 @@ const navItems = [
   {
     text: "Transactions",
     icon: <ReceiptLongOutlined />,
-  },
-  {
-    text: "Geography",
-    icon: <PublicOutlined />,
   },
   {
     text: "Sales",
@@ -145,12 +140,10 @@ const Sidebar = ({
             <List>
               {navItems.map(({ text, icon }) => {
                 if (!icon) {
-                  return (
-                    <>
+                  return (                    
                     <Typography key={text} sx={{ m: "2.25rem 0 1rem 3rem" }}>
                       {text}
                     </Typography>
-                    </>
                   );
                 }
                 const lcText = text.toLowerCase();

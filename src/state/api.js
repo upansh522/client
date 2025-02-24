@@ -6,7 +6,9 @@ export const api = createApi({
     tagTypes:[
         "User",
         "Products",
-        "Customers"
+        "Customers",
+        "Transaction",
+        "Sales",
     ],
     endpoints:(builder)=>({
         getUser: builder.query({
@@ -21,7 +23,18 @@ export const api = createApi({
             query: ()=>'client/customers',
             providesTags:["Customers"]
         }),
-    })
+        getTarsaction: builder.query({
+            query:({page,pageSize,sort,search})=>({
+                url: "client/transaction",
+                method: "GET",
+                params: { page, pageSize, sort, search},
+            }),
+            providesTags:["Transaction"]
+        }),getSales: builder.query({
+            query: () => "sales/sales",
+            providesTags: ["Sales"],
+          }),
+    }),
 })
 
-export const {useGetUserQuery,useGetProductsQuery,useGetCustomersQuery}=api;
+export const {useGetUserQuery,useGetProductsQuery,useGetCustomersQuery,useGetTarsactionQuery,useGetSalesQuery}=api;

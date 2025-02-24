@@ -8,6 +8,11 @@ import Layout from "scenes/Layout";
  import Dashboard from "scenes/Dashboard";
 import Products from "scenes/Products/index";
 import Customers from "scenes/Customers/Customers";
+import Transaction from "scenes/Transaction/Transaction";
+import Overview from "scenes/Ovreview";
+import Daily from "scenes/daily";
+import Monthly from "scenes/Monthly";
+import Breakdown from "scenes/BreakDown";
 
 
 function App() {
@@ -24,6 +29,11 @@ function App() {
           <Route path='/dashboard' element={<Dashboard/>}/>
           <Route path='/products' element={<Products/>}/>
           <Route path='/customers' element={<Customers/>}/>
+          <Route path='/transactions' element={<Transaction/>}/>
+          <Route path="/overview" element={<Overview />} />
+          <Route path="/daily" element={<Daily />} />
+          <Route path="/monthly" element={<Monthly />} />
+          <Route path="/breakdown" element={<Breakdown />} />
           </Route>
         </Routes>
       </ThemeProvider>
