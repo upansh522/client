@@ -44,8 +44,12 @@ export const api = createApi({
             query: (id) => `management/performance/${id}`,
             providesTags: ["Performance"],
           }),
+          getDashboard: builder.query({
+            query: () => "general/dashboard",
+            providesTags: ["Dashboard"],
+          }),
 
     }),
 })
 
-export const {useGetUserQuery,useGetProductsQuery,useGetCustomersQuery,useGetTarsactionQuery,useGetSalesQuery,useGetAdminQuery,useGetUserPerformanceQuery,}=api;
+export const {useGetUserQuery,useGetProductsQuery,useGetCustomersQuery,useGetTarsactionQuery,useGetSalesQuery,useGetAdminQuery,useGetUserPerformanceQuery,useGetDashboardQuery}=api;
